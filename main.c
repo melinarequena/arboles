@@ -12,6 +12,10 @@ int main() {
     root = insert(root, newNode(11));
 
     inOrden(root);
+    printf("\n");
+    preOrden(root);
+    printf("\n");
+    postOrden(root);
 
     return 0;
 }

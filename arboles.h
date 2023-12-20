@@ -14,7 +14,9 @@ typedef struct node{
 
 Node * insert(Node * root, Node * nodo);
 Node * newNode(int data);
-Node * inOrden(Node * root);
+void inOrden(Node * root);
+void postOrden(Node * root);
+void preOrden(Node * root);
 
 
 

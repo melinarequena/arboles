@@ -32,11 +32,26 @@ Node *insert(Node *root, Node *nodo) {
     return root;
 }
 
-Node * inOrden(Node *root) {
-    if(!root){
-        return root;
+void inOrden(Node *root) {
+    if(root){
+        inOrden(root->izq);
+        printf("%d\t", root->data);
+        inOrden(root->der);
     }
-    inOrden(root->izq);
-    printf("%d", root->data);
-    inOrden(root->der);
+}
+
+void postOrden(Node *root) {
+    if(root){
+        postOrden(root->izq);
+        postOrden(root->der);
+        printf("%d\t", root->data);
+    }
+}
+
+void preOrden(Node *root) {
+    if(root){
+        printf("%d\t", root->data);
+        preOrden(root->izq);
+        preOrden(root->der);
+    }
 }
