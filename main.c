@@ -12,10 +12,11 @@ int main() {
     root = insert(root, 10);
     root = insert(root, 11);
 
+    printf("\nInorder\n");
     inOrden(root);
-    printf("\n");
+    printf("\nPreorder\n");
     preOrden(root);
-    printf("\n");
+    printf("\nPostOrder\n");
     postOrden(root);
 
     return 0;
