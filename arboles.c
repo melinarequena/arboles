@@ -55,3 +55,13 @@ void preOrden(Node *root) {
         preOrden(root->der);
     }
 }
+
+bool busqueda(Node *root, int valorABuacar) {
+    if(root) {
+        if (root->data == valorABuacar) {
+            return true;
+        }
+        busqueda(root->der, valorABuacar);
+        busqueda(root->izq, valorABuacar);
+    }
+}

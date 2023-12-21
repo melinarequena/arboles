@@ -19,5 +19,11 @@ int main() {
     printf("\nPostOrder\n");
     postOrden(root);
 
+    if(busqueda(root, 5) == true){
+        printf("El elemento se encuentra en el arbol\n");
+    }else{
+        printf("No se encuentra el elemento\n");
+    }
+
     return 0;
 }

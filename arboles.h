@@ -5,6 +5,8 @@
 #ifndef ARBOLES_ARBOLES_H
 #define ARBOLES_ARBOLES_H
 
+#include <stdbool.h>
+
 typedef struct node{
     int data;
     struct node * der;
@@ -17,7 +19,7 @@ Node * newNode(int data);
 void inOrden(Node * root);
 void postOrden(Node * root);
 void preOrden(Node * root);
-
+bool busqueda(Node * root, int valorABuacar);
 
 
 #endif //ARBOLES_ARBOLES_H
