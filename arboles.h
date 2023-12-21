@@ -12,7 +12,7 @@ typedef struct node{
 }Node;
 
 
-Node * insert(Node * root, Node * nodo);
+Node * insert(Node * root, int data);
 Node * newNode(int data);
 void inOrden(Node * root);
 void postOrden(Node * root);

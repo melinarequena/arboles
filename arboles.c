@@ -20,14 +20,14 @@ Node *newNode(int data) {
     return aux;
 }
 
-Node *insert(Node *root, Node *nodo) {
-    if(!root){
-        return nodo;
+Node *insert(Node *root, int data) {
+    if(root == NULL){
+        return newNode(data);
     }
-    if(nodo->data < root->data){
-        root->izq = insert(nodo->izq, nodo);
+    if(data < root->data){
+        root->izq = insert(root->izq, data);
     }else{
-        root->der = insert(nodo->der, nodo);
+        root->der = insert(root->der, data);
     }
     return root;
 }
